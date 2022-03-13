@@ -1,29 +1,42 @@
-# Dimensionality_Reduction
-This is the Code for "Dimensionality Reduction - The Math of Intelligence #5" By Siraj Raval on Youtube
-
-# Coding Challenge - Due Date, Thursday July 20th at 12 PM PST
-
-This weeks challenge is to implement PCA on a dataset of your choice using just numpy. Bonus points for using a Jupyter notebook.
-If you'd like a suggestion of a dataset cluster, use [kaggle](https://www.kaggle.com/datasets).
+## Principal Component Anaylisis
 
 ## Overview
 
-This is the code for [this](https://youtu.be/jPmV3j1dAv4) video on Youtube by Siraj Raval as part of The Math of Intelligence series. We're going to 
-perform a popular dimensionality reduction technique on an iris flower dataset to be able to clearly visualize it.
+Unsupervised. Dimensionality reduction. 
+Feature extraction technique consisting of finding new features after transforming the data from
+a high dimensional space to a lower dimensional space.
+Discover non-linear non-local relationships in data that are not in the original
+feature space.
 
-## Dependencies
+## How does it work ?
 
-* numpy
-* matplotlib
+Orthogonal linear transformation that transforms data to a new coordinate system such that
+the greatest ("2nd) variance by some projection of the data lies on the first (2nd) component, etc.
+It is a variance maximizing exercise, it projects the data onto a direction which maximizes variance.
 
-Install dependencies using [pip](https://pip.pypa.io/)
+## Eigenvectors, Eigenvalues
 
-## Usage
+Eigen is a german word that roughly translates to "characteristic". 
+An eigenvector is a vector that does not change its direction and length under the associated linear transformation.
 
-Just run `jupyter notebook` when in the main directory and the code will pop up in your browser.
+Av = &lambda;v
 
-Install jupyter [here](http://jupyter.readthedocs.io/en/latest/install.html)
+with A some matrix, v the eigenvector and &lambda; the associated eigenvalue
 
-## Credits
+An eigenpair is the eigenvalue and its associated eigenvector.
 
-The credits for this code go to [rasbt](https://github.com/rasbt). I've merely created a wrapper to get people started. 
+## Steps
+
+1. Standardize data
+2. Eigendecomposition of the covariance matrix
+3. Select the P (e.g. 2) highest eigenpairs
+4. Construct the projection matrix w (= concatenated top P eigenvectors)
+5. Transform the original data onto the new subspace (dot product : data*w)
+
+## Use cases
+
+* Feature selection (avoid overfitting, reduce computing time, reduce complexity)
+* Data visualization (possible to plot data in 2D or 3D)
+
+* Siraj Raval
+* [rasbt](https://github.com/rasbt).
