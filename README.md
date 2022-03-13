@@ -38,5 +38,7 @@ An eigenpair is the eigenvalue and its associated eigenvector.
 * Feature selection (avoid overfitting, reduce computing time, reduce complexity)
 * Data visualization (possible to plot data in 2D or 3D)
 
+## Credits
+
 * Siraj Raval
 * [rasbt](https://github.com/rasbt).
