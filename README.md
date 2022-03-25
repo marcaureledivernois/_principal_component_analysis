@@ -41,4 +41,4 @@ An eigenpair is the eigenvalue and its associated eigenvector.
 ## Credits
 
 * Siraj Raval
-* [rasbt](https://github.com/rasbt).
+* Code has been forked from [rasbt](https://github.com/rasbt). I mainly corrected/updated it to make it work on my computers.
